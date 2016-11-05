@@ -1,0 +1,15 @@
+﻿@model BasicsOfForms.Models.RegisterViewModel
+@{
+    ViewBag.Title = "Razor";
+}
+
+<h2>Razor</h2>
+
+@using (Html.BeginForm("Razor", "Basics", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post))
+            {
+    @Html.AntiForgeryToken()
+    @Html.TextBoxFor(m => m.Email)
+    @Html.PasswordFor(m => m.Password)
+    @Html.PasswordFor(m => m.ConfirmPassword)
+    <input type="submit" value="click" />
+}

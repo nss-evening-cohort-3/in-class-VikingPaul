@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Angular";
+}
+
+<h2>Angular</h2>
+
+<div ng-controller="things">
+    <form>
+        @Html.AntiForgeryToken()
+        <input name="email" placeholder="email" ng-model="stuff.email" />
+        <input name="password" placeholder="password" ng-model="stuff.password" />
+        <input name="passwordconfirmation" placeholder="passwordconfirmation" ng-model="stuff.passwordconfirmation" />
+        <button type="submit" onclick="event.preventDefault()" ng-click="click()">click</button>
+    </form>
+</div>

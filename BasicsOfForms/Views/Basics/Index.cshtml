@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<form action="/Basics/Index" method="POST">
+    @Html.AntiForgeryToken()
+    <input name="email" placeholder="email" />
+    <input name="password" placeholder="password" />
+    <input name="passwordconfirmation" placeholder="passwordconfirmation" />
+    <input type="submit" value="click" />
+</form>
